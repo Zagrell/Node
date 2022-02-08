@@ -18,7 +18,7 @@ console.log(Number(numberOne)+Number(numberTwo));
 
 const anotherNumberOne = "1.10";
 const anotherNumberTwo = "2.30";
-console.log((Number(anotherNumberOne)+Number(anotherNumberTwo)).toFixed(2));
+console.log((Number(anotherNumberOne) + Number(anotherNumberTwo)).toFixed(2));
 
 // --------------------------------------
 // Exercise 3 - Decimals and average
@@ -29,7 +29,7 @@ const three = 98;
 
 // Show in the console the avg. with 5 decimals
 
-const avg = (one+two+three)/3;
+const avg = (one + two + three)/3;
 console.log(avg.toFixed(5));
 
 // --------------------------------------
@@ -47,7 +47,7 @@ const fact = "You are learning javascript!";
 
 // capitalize the J in Javascript
 
-const factCap = fact.replace('j','J');
+const factCap = fact.replace('j', 'J');
 console.log(factCap);
 
 // --------------------------------------
