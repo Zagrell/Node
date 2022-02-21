@@ -25,13 +25,13 @@ let idCounter = 3
 
 //GET
 app.get("/movies",(req, res) => {
-    res.send(movies);
+    res.send({ data: movies });
 });
 
 app.get("/movies/:id",(req, res) => {
     const index = movies.findIndex(movie => movie.id === Number(req.params.id));
     if(index !== -1){
-    res.send(movies[index]);
+    res.send({ data: movies[index] });
     }else {
         res.send({})
     }
@@ -41,10 +41,10 @@ app.get("/movies/:id",(req, res) => {
 app.post("/movies", (req, res) => {
     const newMovie = {
         id: idCounter++,
-        title: req.body.title
+        title: req.body.data.title
     };
     movies.push(newMovie);
-    res.send(newMovie);
+    res.send({ data: newMovie });
 });
 
 //PUT
@@ -81,8 +81,8 @@ app.patch("/movies/:id", (req, res) => {
 app.delete("/movies/:id", (req, res) => {
     const index = movies.findIndex(movie => movie.id === Number(req.params.id));
     if(index !== -1){
-        res.send(movies[index]);
-        movies.splice(index,1);
+        res.send(movies.splice(index,1));
+        
     }else {
         res.send({})
     }
