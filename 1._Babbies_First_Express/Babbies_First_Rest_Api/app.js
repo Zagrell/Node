@@ -69,10 +69,11 @@ app.put("/movies/:id", (req, res) => {
 app.patch("/movies/:id", (req, res) => {
     const index = movies.findIndex(movie => movie.id === Number(req.params.id));
     if(index !== -1){
-        movies[index].title = req.body.title;
+        const movieToUpdateWith = req.body;
+        movies[index] = { ...movies[index], ...movieToUpdateWith, id: movies[index].id}    
         res.send(movies[index]);
     }else {
-        res.send({})
+        res.status(404).send({});
     }
 
 });

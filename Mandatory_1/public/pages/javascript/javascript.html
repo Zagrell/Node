@@ -1,0 +1,36 @@
+<!-- variables div-->
+<h2>Javascript</h2>
+<div class="content">
+    <div>
+        <h4>Variables</h4>
+        <p>There are three ways to make variables in javascript. These are var, const, and let</p>
+        <p>var is seldom used these days, since it is in global scope and are thuss hard to keep track of</p>
+        <p>let is just a normal variable that you can do whatever you want with</p>
+        <p>const is a variable that you have to assign on declaration and you cannot reassign it,
+            it is not a constant in the same way Java defines constants, but rather only the pointer is constant</p>
+        <p>in general:<br>use const if you can otherwise use let, and do not use var</p>
+    </div>
+
+    <div>
+        <h4>Itteration</h4>
+        <p>in javascript you can itterate through an array in a few ways.</p>
+        <p>the for loop is implemented in javascript but we do not like to use it except in some select scenarios</p>
+        <img src="/resources/forloop.png">
+
+        <p>rather in javascript we prefer the functional approach</p>
+        <p>to start with there is the forEach() method which executes a given function for each element in an array</p>
+        <img src="/resources/foreach.png">
+
+        <p>using forEach for printing is perfectly fine but the problem with forEach is that it has to have side effects for it to acomplish anything</p>
+
+        <p>the map function like forEach takes a function and executes it for each element in the array, but then returns a new array based on the previous one<br>
+        thuss avoiding side effects. The following code creates a new array where all elements are 10 times larger than the previous array's</p>
+        <img src="/resources/map.png">
+
+        <p>if we want to search for some elements in an array based on a criteria, we want to use the filter method<br>
+        filter unlike the other two methods is that is checks the return value of the callback function to see if its true of false.<br>
+        If it is true then the element will remain in the resulting array</p>
+        <p>the following creates a new array with all the elements that have a value above 4 containing in the previous array:</p>
+        <img src="/resources/filter.png">
+    </div>
+</div>

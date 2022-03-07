@@ -1,0 +1,41 @@
+<h2>Node.js</h2>
+<div class="content">
+
+    <div>
+        <h4>About</h4>
+        <p>node is a tool used to make it possible to execute javascript code without a browser. This makes it then possible to make server code using javascript</p>
+    </div>
+
+    <div>
+        <h4>package.json</h4>
+        <p>The package.json is where node has all the metadata for the project, and most importantly for us is where we define dependencies</p>
+        <img src="/resources/packagejson.png">
+        <p>this here is an example of our super simple package.json where we only say that we want to use express, note that is has to be valid json and be placed in the project's root folder</p>
+    </div>
+    
+    <div>
+        <h4>Installing modules</h4>
+        <p>now that we have our package.json set up we need to install express and its dependencies</p>
+        <p>to do this we open a terminal in the projects root folder and execute npm install, npm is node's package manager</p>
+        <img src="/resources/npminstall.png">
+        <p>now all the modules required for our dependencies will be installed in the node_modules folder in the root of the project</p>
+    </div>
+
+    <div>
+        <h4>Running node</h4>
+        <p>to run a script simply execute node sciptname.js in the terminal.<br>
+        When we create node project convention is that our entrypoint is called app.js</p>
+        <img src="/resources/noderun.png">
+
+    </div>
+
+    <div>
+        <h4>Live reload</h4>
+        <p>since live reloading is nice we do want it, it is not included in node by default so we have to install a new program. We will be using nodemon</p>
+        <p>to run your program with live reload simply execute nodemon.cmd app.js in a terminal</p>
+        <img src="/resources/nodemon.png">
+        <p>to have nodemon rerun with html and css changes you define a nodemon.json file like this:</p>
+        <img src="/resources/nodemonjson.png">
+    </div>
+
+</div>
